@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background:rgb(240, 236, 236);
+}
+a{
+    text-decoration: none;
+}
+.nav-bar{
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 2px solid black;
+    position:fixed;
+    width:100%; 
+    height: 90px;
+}
+.menu, .Logo,.menu-mobile{
+    margin: 10px 70px;
+}
+.Logo{
+    color:rgb(60, 72, 88);
+    font-weight:100;
+}
+.menu a{
+    padding:10px;
+    color:rgb(129, 128, 128);
+}
+.menu a:hover{
+    color:rgb(53, 4, 168);
+    transition:.3s;
+}
+.menu .btn-menu{
+    color:rgb(255, 255, 255);
+    background-color: blue;
+    padding:10px 30px;
+    border-radius: 8px;
+    border-bottom: 2px solid rgb(12, 12, 185);
+}
+.menu .btn-menu:hover{
+    background-color: rgb(24, 24, 155);
+    transition: .3s;
+    color:white;
+    text-decoration: none;
+}
+.menu-mobile{
+    display:none;
+    transition: all 10s; 
+}
+.menu-item{
+    position:absolute;
+    left:0;
+    text-align: center;
+    width: 100%;
+    background-color:white;
+    border-bottom: 2px solid black;
+    transition:10s;
+    display:none;
+    
+}
+.menu-item a{
+    display:block;
+    color:rgb(72, 72, 190);
+    margin-bottom:10px;
+}
+.bt-menu{
+    cursor:pointer;
+    font-size: 50px;
+}
+.menu-item.show{
+    display:block;
+    transform: translateY(10px);
+}
+@media screen and (max-width:768px) 
+{
+    .menu, .Logo,.menu-mobile{
+        margin: 10px 20px;
+    }
+    .menu{
+        display:none;
+    }
+    .menu-mobile{
+        display:block;
+    }
+    .menu-item{
+        display:none;
+    }
+}

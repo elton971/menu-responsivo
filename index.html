@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>menu</title>
+</head>
+<body>
+    <header class="nav-bar">
+        <!-- logo -->
+        <div class="Logo">
+            <h2>FlightBeats</h2>
+        </div> 
+        <!-- Menu -->
+        <div class="menu">
+            <a href="#">
+                Home
+            </a>
+            <a href="#">
+                Sobre
+            </a>
+            <a href="#">
+                Contacto
+            </a>
+            <a class="btn-menu" href="#" > 
+                Get started
+            </a>
+        </div>
+        <!-- menu mobile -->
+        <div class="menu-mobile">
+            <div class="bt-menu">
+                <i>&equiv;</i>
+            </div>
+            <div class="menu-item">
+                <a href="#">
+                    Home
+                </a>
+                <a href="#">
+                    Sobre
+                </a>
+                <a href="#">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </header>
+    <script>
+        var btn=document.querySelector(".bt-menu");
+
+        btn.addEventListener("click",()=>{
+            menu_item=document.querySelector('.menu-item');
+            if(menu_item.classList.contains("show"))
+            {
+                menu_item.classList.remove("show");
+            }
+            else{
+                menu_item.classList.add("show");
+            }
+        });
+    </script>
+    
+</body>
+</html>
